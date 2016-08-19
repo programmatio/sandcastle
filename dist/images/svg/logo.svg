@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="319px" height="83px" viewBox="0 0 319 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M24.2233333,17.3433333 L17.7733333,10.9291667 L12.7208333,15.9816667 L19.135,22.3958333 L24.2233333,17.3433333 L24.2233333,17.3433333 Z M14.3333333,37.625 L3.58333333,37.625 L3.58333333,44.7916667 L14.3333333,44.7916667 L14.3333333,37.625 L14.3333333,37.625 Z M46.5833333,1.97083333 L39.4166667,1.97083333 L39.4166667,12.5416667 L46.5833333,12.5416667 L46.5833333,1.97083333 L46.5833333,1.97083333 Z M73.2791667,15.9816667 L68.2266667,10.9291667 L61.8125,17.3433333 L66.865,22.3958333 L73.2791667,15.9816667 L73.2791667,15.9816667 Z M61.7766667,65.0733333 L68.1908333,71.5233333 L73.2433333,66.4708333 L66.7933333,60.0566667 L61.7766667,65.0733333 L61.7766667,65.0733333 Z M71.6666667,37.625 L71.6666667,44.7916667 L82.4166667,44.7916667 L82.4166667,37.625 L71.6666667,37.625 L71.6666667,37.625 Z M43,19.7083333 C31.1391667,19.7083333 21.5,29.3475 21.5,41.2083333 C21.5,53.0691667 31.1391667,62.7083333 43,62.7083333 C54.8608333,62.7083333 64.5,53.0691667 64.5,41.2083333 C64.5,29.3475 54.8608333,19.7083333 43,19.7083333 L43,19.7083333 Z M39.4166667,80.4458333 L46.5833333,80.4458333 L46.5833333,69.875 L39.4166667,69.875 L39.4166667,80.4458333 L39.4166667,80.4458333 Z M12.7208333,66.435 L17.7733333,71.4875 L24.1875,65.0375 L19.135,59.985 L12.7208333,66.435 L12.7208333,66.435 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-3" font-family="OpenSans-Extrabold, Open Sans" font-size="35" font-weight="600" letter-spacing="0.4375" fill="#FBFF02">
+            <tspan x="120.580811" y="52">BEACH ART</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0629251701   0 0 0 0 0.0629251701   0 0 0 0 0.0629251701  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sandcastle-website-test" transform="translate(-46.000000, -36.000000)">
+            <g id="header" transform="translate(45.000000, 35.000000)">
+                <g id="logo">
+                    <g id="ICON">
+                        <g id="Group">
+                            <polygon id="Shape" points="0 0 86 0 86 86 0 86"></polygon>
+                            <g id="Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#FBFF01" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="BEACH-ART" fill-opacity="1" fill="#FBFF02">
+                        <use filter="url(#filter-4)" xlink:href="#text-3"></use>
+                        <use xlink:href="#text-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

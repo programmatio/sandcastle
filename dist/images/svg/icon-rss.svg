@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-rss</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sandcastle-website-test" transform="translate(-804.000000, -3388.000000)">
+            <g id="footer" transform="translate(0.000000, 3189.000000)">
+                <g id="social-icons" transform="translate(612.000000, 199.000000)">
+                    <g id="icon-rss" transform="translate(192.000000, 0.000000)">
+                        <rect id="bg" fill="#929497" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M0.000257140102,20.5714286 C0.000257140102,18.678 1.53538355,17.1428571 3.42879183,17.1428571 C5.32220012,17.1428571 6.85732653,18.678 6.85732653,20.5714286 C6.85732653,22.4648571 5.32220012,24 3.42879183,24 C1.53538355,24 0.000257140102,22.4648571 0.000257140102,20.5714286 Z M24,24 L19.4289061,24 C19.4289061,13.2865714 10.7135709,4.57114286 0.000257140102,4.57114286 L0.000257140102,0 C13.2335439,0 24,10.7665714 24,24 Z M16.0001143,24 L11.4290204,24 C11.4290204,17.6982857 6.30164677,12.5717143 0,12.5717143 L0,7.99971429 C8.8224769,7.99971429 16.0001143,15.1774286 16.0001143,24 Z" id="RSS" fill="#FFD576"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

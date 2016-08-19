@@ -1,0 +1,98 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Beach Art 
+    meta(name='description', content='Do Androids Dream of Electric Sand Beach? The answer may surprise you.')
+    style(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css')
+    //- Good idea add inline css for to increase render speed and avoid FOUT - currently standard practice
+    <!--[if lt IE 9]>
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    <!--<![endif]-->
+  body
+    header.menu
+      .responsive
+        a.logo(href='#')
+        nav.top-nav
+          a(href='#') Featured
+          a(href='#') Top 10
+          a(href='#') Competitions
+    main#slideshow.hero
+      .responsive.full-width.hero-slider
+        .container
+          .caption
+            h1 Beach art
+            p The best sand castles in the world!!
+          .hero-image
+            img(src=require('./images/@1x/slide-image-1.png'), srcset=require('./images/@2x/slide-image-1@2x.png') + ' 2x', alt='')
+        .container
+          .caption
+            h1 Ready to compete?
+            p Gear up for our next competition
+          .hero-image
+            img(src=require('./images/@1x/slide-image-2.png'), srcset=require('./images/@2x/slide-image-2@2x.png') + ' 2x', alt='')
+    section#featured.featured
+      .responsive
+        h2 Best art this month
+        p Jurassic beach!
+        img(src=require('./images/@1x/image-1.png'), srcset=require('./images/@2x/image-1@2x.png') + ' 2x', alt='')
+        a.btn(href='./images/@1x/image-1.png' data-retina-href='./images/@2x/image-1@2x.png') Full screen
+    section#gallery.gallery
+      .responsive
+        .tile.large
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-1.png'), srcset=require('./images/@2x/image-gallery-1@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-1.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-1@2x.png'), alt='')
+        .tile.medium
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-2.png'), srcset=require('./images/@2x/image-gallery-2@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-2.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-2@2x.png'), alt='')
+        .tile.medium
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-3.png'), srcset=require('./images/@2x/image-gallery-3@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-3.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-3@2x.png'), alt='')
+        .tile.small
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-4.png'), srcset=require('./images/@2x/image-gallery-4@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-4.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-4@2x.png'), alt='')
+        .tile.small
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-5.png'), srcset=require('./images/@2x/image-gallery-5@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-5.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-5@2x.png'), alt='')
+        .tile.small
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-6.png'), srcset=require('./images/@2x/image-gallery-6@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-6.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-6@2x.png'), alt='')
+        .tile.large
+          a(href='#')
+            img(src=require('./images/@1x/image-gallery-7.png'), srcset=require('./images/@2x/image-gallery-7@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-7.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-7@2x.png'), alt='')
+
+    section#side-feature.side-feature
+      .responsive
+        .side.first
+          h2 Let's get technical
+          p The science behind the perfect sand castle
+          a.btn(href='#') See Here
+        .side.last
+          img(src=require('./images/@1x/image-2.png'), srcset=require('./images/@2x/image-2@2x.png') + ' 2x', alt='')
+
+    footer.footer
+      .responsive
+        nav.footer-nav
+          a(href='#') Featured
+          a(href='#') Top 10
+          a(href='#') Competitions
+        .social-container
+          h3 Follow us
+          ul.social-icons
+            li
+              a(href='#')
+                i.facebook
+            li
+              a(href='#')
+                i.twitter
+            li
+              a(href='#')
+                i.github
+            li
+              a(href='#')
+                i.medium
+            li
+              a(href='#')
+                i.rss

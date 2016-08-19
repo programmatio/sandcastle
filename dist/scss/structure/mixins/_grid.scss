@@ -1,0 +1,59 @@
+
+// =====================================================================================================================
+// Mixins for flexible column layout
+// =====================================================================================================================
+
+// calcs width of element based on the total no of columns in its row
+@mixin grid-column-width($cols-in-row, $gutters: 2) {
+	$total-gap-width: 0;
+
+	@if $gap-width and not(unitless($gap-width)) {
+		$total-gap-width: ($cols-in-row + ($gutters - 1)) * $gap-width;
+	}
+
+	width: calc((100% - #{$total-gap-width}) / #{$cols-in-row});
+}
+
+// calcs the property of element based on no of columns it occupies over X column grid row
+@mixin calc-grid-property($property, $cols, $gutters: 0, $total-cols: 12) {
+	$total-gap-width: 0;
+	$internal-gap-width: 0;
+
+	@if $gutters == 0 {
+		$internal-gap-width: ($cols - 1) * $gap-width;
+	} @else {
+		$internal-gap-width: $gutters * $gap-width;
+	}
+
+	@if $gap-width and not(unitless($gap-width)) {
+		$total-gap-width: ($total-cols + 1) * $gap-width;
+	}
+
+	#{$property}: calc((100% - #{$total-gap-width}) / #{$total-cols} * #{$cols} + #{$internal-gap-width});
+}
+
+// calcs width of element based on no of columns it occupies over X column grid row
+@mixin grid-multi-column-width($cols, $total-cols: 12, $extra-gap: false) {
+	@if $extra-gap {
+		@include calc-grid-property('width', $cols, $cols, $total-cols);
+	} @else {
+		@include calc-grid-property('width', $cols, 0, $total-cols);
+	}
+}
+
+// Same as above but assumes no gap width at the edges
+@mixin grid-multi-column-width-internal($cols, $total-cols: 12, $extra-gap: false) {
+	$total-gap-width: 0;
+	$internal-gap-width: ($cols - if($extra-gap, 0, 1)) * $gap-width;
+
+	@if $gap-width and not(unitless($gap-width)) {
+		$total-gap-width: ($total-cols - 1) * $gap-width;
+	}
+
+	@if $internal-gap-width > 0 {
+		width: calc((100% - #{$total-gap-width}) / #{$total-cols} * #{$cols} + #{$internal-gap-width});
+	} @else {
+		width: calc((100% - #{$total-gap-width}) / #{$total-cols} * #{$cols});
+	}
+
+}

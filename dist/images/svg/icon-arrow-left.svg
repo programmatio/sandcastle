@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="38px" viewBox="0 0 23 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-arrow-left</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sandcastle-website-test" transform="translate(-69.000000, -281.000000)">
+            <g id="section-1">
+                <g id="arrow-navigation" transform="translate(45.000000, 264.000000)">
+                    <g id="icon-arrow-left">
+                        <polygon id="Bounds" fill-opacity="0" fill="#FF0000" points="0 0 72 0 72 72 0 72"></polygon>
+                        <polygon id="Shape" fill="#FFFFFF" points="46.23 50.28125 32.49 35.9375 46.23 21.59375 42 17.1875 24 35.9375 42 54.6875"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

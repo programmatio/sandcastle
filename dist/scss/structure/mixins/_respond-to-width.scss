@@ -1,0 +1,45 @@
+
+$media-min-device-width-desktop: 1025px;
+
+
+@mixin respond-to-width($min, $max: null) {
+	$media-width-feature: device-width;
+
+	$media-min-device-width: 100000px;
+	$media-max-device-width: 100000px;
+
+	@if global-variable-exists(global-device-width) {
+		$media-width-feature: if($global-device-width, device-width, width);
+
+		@if $global-device-width and $min and $min < $media-min-device-width-desktop {
+			$media-width-feature: width;
+
+			@if not $max {
+				$media-min-device-width: $min;
+			} @else if $max < ($media-min-device-width-desktop) {
+				$media-max-device-width: $media-min-device-width-desktop - 1;
+			} @else if $max >= ($media-min-device-width-desktop) {
+				$media-max-device-width: $max;
+			}
+		}
+	}
+
+	@if $min and $min > 0 and $max and $max > 0 {
+		@media only screen and (min- + $media-width-feature: if(unitless($min), $min * 1px, $min))
+				and (max- + $media-width-feature: if(unitless($max), $max * 1px, $max) - 1)
+				and (max-device-width: $media-max-device-width) {
+			@content;
+		}
+	} @else if $min and $min > 0 {
+		@media
+				only screen and (min- + $media-width-feature: if(unitless($min), $min * 1px, $min)),
+				only screen and (min-device-width: $media-min-device-width) {
+			@content;
+		}
+	} @else if $max and $max > 0 {
+		@media only screen and (max- + $media-width-feature: if(unitless($max), $max * 1px, $max) - 1)
+				and (max-device-width: $media-max-device-width) {
+			@content;
+		}
+	}
+}

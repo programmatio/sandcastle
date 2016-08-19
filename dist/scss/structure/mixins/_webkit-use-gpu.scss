@@ -1,0 +1,4 @@
+@mixin webkit-use-gpu {
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
