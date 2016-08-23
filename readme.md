@@ -16,6 +16,7 @@ Source images are Pug(former Jade), SCSS,  ES6m, webpack was used as a builder a
 
 #### Build
 
-SEO friendly, performant and reliable. From here it can rapidly scale as isomorphic single page application (using appropriate frameworks such as Angular2 or React.js. Failing grecefully in IE gallery image (blur) but still possible to improve
+SEO friendly, performant and reliable. Inline is used to load critical assets to avoid FOUT and increase load speed. From here it can rapidly scale as isomorphic single page application (using appropriate frameworks such as Angular2 or React.js. Failing grecefully in IE gallery image (blur) but still possible to improve.
+
 
 > - npm start - to start development server on localhost:3000
