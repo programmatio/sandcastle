@@ -43,6 +43,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loaders: [
           'url-loader?name=[path][name].[ext]&limit=10000',
+          'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
         ]
       },
       {

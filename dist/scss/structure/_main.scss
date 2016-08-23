@@ -2,6 +2,20 @@
 
 //Core
 $legacy_browser_support: true;
+
+/* IE10+ detection */
+.blur-ie {
+  display:none;
+}
+
+html[data-agent*="Trident"] .blur {
+display: none;
+}
+/* IE10+ detection */
+html[data-agent*="Trident"] .blur-ie {
+display: block;
+}
+
 html {
   height: 100%;
 }
@@ -13,6 +27,10 @@ a {
 
 a, img, .tile {
     transition: .1s ease-in-out;
+}
+
+img {
+  flex: none; //IE flex img ratio fix
 }
 
 body {
@@ -115,6 +133,7 @@ p {
 .responsive {
   width: 100%;
   height: 100%;
+  display: table-cell;
   display: flex;
   flex-wrap: wrap;
   @include respond-to-width($breakpoint-4) {
@@ -157,6 +176,7 @@ p {
   z-index: 10;
   width: 100%;
   .responsive {
+    
     display: flex;
     justify-content: space-between;
   }
@@ -189,9 +209,10 @@ p {
 
       .logo {
           padding: 0;
-          margin: 0;
-          width: calc(319px / 2);
-          height: calc(83px / 2);
+          margin: 20px 0 0 0;
+          width: calc(319px / 1.5);
+          height: calc(83px / 1.5);
+          display: inline-block;
           background-size: cover;
       }
 
@@ -220,29 +241,43 @@ p {
   height: 600px;
   background: #B86402;
   color: white;
+  overflow: hidden;
+
+  .container{
+    width: 100%;
+  }
+
   .caption {
     margin-top:20px;
   }
 
-  .hero-image {
-    filter: blur(5px);
+  .hero-image {  
     position: relative;
     height: 600px;
     overflow: hidden;
-    padding: 5px;margin-top:-5px;
-    // center image on resize
-    img {
-      margin: -5px 0px;
+
+    svg {
+      width: auto;
+      height: 100%;
+      position:absolute;
       height: 100%;
       left: 50%;
-      position: absolute;
       transform: translateX(-50%);
+    }
+  
+    img {
+      filter: blur(5px);
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      clip: inset(-110px, -160px, 100%, 100%);
+
       width: auto;
     }
     // gradient on the hero
     &:before {
       content: "";
-      margin: -5px 0px;
       background: linear-gradient(135deg, rgba(184, 99, 2, 0.48) 0%, rgba(255, 129, 1, 0.30) 47%, rgba(222, 255, 0, 0.1) 100%);
       position: absolute;
       left: 0;
@@ -282,17 +317,7 @@ p {
   img {
     width: 100%;
   }
-  @include respond-to-width($breakpoint-2, $breakpoint-4) {
-    .large {
-      width: calc(50%);
-    }
-    .medium {
-      width: calc(50% / 2)
-    }
-    .small {
-      width: calc(50% / 3)
-    }
-  }
+
 
   
   @include respond-to-width(0, $breakpoint-2) {
@@ -303,9 +328,37 @@ p {
       width: calc(100% / 2)
     }
     .small {
-      width: calc(100% / 3)
+      width: calc(100% / 3);
+      max-width: 33.33%; //IE calc fix
+ 
     }
   }
+
+  @include respond-to-width($breakpoint-2, $breakpoint-4) {
+    .large {
+      width: calc(50%);
+    }
+    .medium {
+      width: calc(50% / 2);
+    }
+    .small {
+      width: calc(50% / 3);
+         max-width:16.66%; //IE calc fix
+    }
+  }
+
+  .large {
+    width: calc(50%);
+  }
+  .medium {
+    width: calc(50% / 2);
+  }
+  .small {
+    width: calc(50% / 3);
+  }
+
+
+
 }
 
 .tile {
@@ -315,30 +368,52 @@ p {
   overflow: hidden;
 
   //neur
+  
   background: rgba(0,0,0,0.5);
 
-  &:hover:after {
-    @include fadeIn();
-    pointer-events: none;
-    position: absolute;
-    z-index: 10px;
-    content: "";
-    width:60px;
-    height: 60px;
-    @include center;
-    background: url(../images/@1x/icon-expand.png) no-repeat;
-    background-image: url(../images/svg/icon-expand.svg), none;
-  }
+
+  // &:after {
+
+  //   pointer-events: none;
+  //   position: absolute;
+  //   z-index: 10px;
+  //   content: "";
+  //   width:100%;
+  //   height: 100%;
+  //   @include center;
+  //   opacity: 0;
+
+  // }
+
+  //   &:hover:after {
+  //       pointer-events: none;
+  //     @include fadeIn();
+  //   }
 
   a {
     display: block;
     text-decoration: none;
     outline: none;
-
+    
     &:hover {
         backface-visibility: hidden;
         transform: translateZ(0) scale(1.02,1.02);
-        filter: blur(3px) brightness(80%) ;
+           
+       img {
+          filter: blur(3px);
+       }
+    }
+        &:hover:after {
+              pointer-events: none;
+       content: '';
+       position: absolute;
+       left:0;
+       top:0;
+       width:100%;
+       height: 100%;
+       background: url(../images/@1x/icon-expand.png) center center no-repeat;
+      background-color: rgba(0,0,0,0.35);
+      background-image: url(../images/svg/icon-expand.svg), none;
     }
   }
   
@@ -350,23 +425,30 @@ p {
 //Side .featured
 .side-feature {
   padding: 150px 0 110px 0;
-
+  height: auto;
   
   h2 {
     //adjust to mathch the image
     margin-top: 40px;
+    line-height: 40px;
+    max-width: 100%; //IE content wrap bug fix
   }
+
   p {
     font-size: 20px;
     line-height: 20px;
+    max-width: 100%; //IE content wrap bug fix
   }
+
   img {
     width: 100%;
     max-width: 710px;
+    flex: none;
   }
+
   .responsive {
     position: relative;
-    justify-content: center;
+          justify-content: space-between;
     flex-wrap: wrap;
   }
   .btn {
@@ -377,10 +459,10 @@ p {
     justify-content: flex-end;
    
     display: flex;
-    justify-content: center;
+   
     align-items: center;
     flex-direction: column;
-
+      justify-content: center;
 
     &.first {
       order: -1;
@@ -397,7 +479,7 @@ p {
   }
   @include respond-to-width($breakpoint-2) {
     .side {
-        width: 50%;
+      width: 50%;
     }
   }
   @include respond-to-width(0, $breakpoint-2) {
@@ -408,10 +490,13 @@ p {
     
     padding: 75px 0 35px 0;
       .side {
+        min-width: 0;
 
-    flex-direction: column;
-    align-content: center;
-          width: 100%;
+        flex-direction: column;
+        align-content: center;
+
+
+
       }
 
     }

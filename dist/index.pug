@@ -6,15 +6,11 @@ html(lang='en')
     title Beach Art 
     meta(name='description', content='Do Androids Dream of Electric Sand Beach? The answer may surprise you.')
     style(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css')
-    //- Good idea add inline css for to increase render speed and avoid FOUT - currently standard practice
-    <!--[if lt IE 9]>
-    script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
-    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
-    <!--<![endif]-->
   body
     header.menu
       .responsive
-        a.logo(href='#')
+        a(href='/')
+          .logo
         nav.top-nav
           a(href='#') Featured
           a(href='#') Top 10
@@ -26,13 +22,29 @@ html(lang='en')
             h1 Beach art
             p The best sand castles in the world!!
           .hero-image
-            img(src=require('./images/@1x/slide-image-1.png'), srcset=require('./images/@2x/slide-image-1@2x.png') + ' 2x', alt='')
+
+            svg.blur-ie
+              defs
+                filter#blur
+                  fegaussianblur(stddeviation='3')
+              image(xlink:href=src=require('./images/@1x/slide-image-1.png'), width='1440' height='600', filter='url(#blur)')
+
+            img.blur(src=require('./images/@1x/slide-image-1.png'), srcset=require('./images/@2x/slide-image-1@2x.png') + ' 2x', alt='')
+
         .container
           .caption
             h1 Ready to compete?
             p Gear up for our next competition
           .hero-image
-            img(src=require('./images/@1x/slide-image-2.png'), srcset=require('./images/@2x/slide-image-2@2x.png') + ' 2x', alt='')
+
+            svg.blur-ie
+              defs
+                filter#blur
+                  fegaussianblur(stddeviation='3')
+              image(xlink:href=src=require('./images/@1x/slide-image-2.png'), width='1440' height='600', filter='url(#blur)')
+
+
+            img.blur(src=require('./images/@1x/slide-image-2.png'), srcset=require('./images/@2x/slide-image-2@2x.png') + ' 2x', alt='')
     section#featured.featured
       .responsive
         h2 Best art this month
