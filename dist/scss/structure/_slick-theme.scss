@@ -61,7 +61,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: 40px;
     list-style: none;
     display: block;
     text-align: center;
@@ -71,45 +71,35 @@ $slick-opacity-not-active: 0.25 !default;
     li {
         position: relative;
         display: inline-block;
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
+
+            &:hover, &:focus, &:active, &.slick-active {
+                button {
+                    background: url(../images/@1x/dot-active.png) no-repeat;
+                    background-image: url(../images/svg/dot-active.svg), none;
+                }
+
+            }
+
         button {
             border: 0;
-            background: transparent;
+            background: url(../images/@1x/dot-inactive.png) no-repeat;
+            background-image: url(../images/svg/dot-inactive.svg), none;
+            background-size: contain;
             display: block;
-            height: 20px;
-            width: 20px;
+            height: 25px;
+            width: 25px;
             outline: none;
             line-height: 0px;
             font-size: 0px;
             color: transparent;
             padding: 5px;
             cursor: pointer;
-            &:hover, &:focus {
-                outline: none;
-                &:before {
-                    opacity: $slick-opacity-on-hover;
-                }
-            }
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: $slick-dot-character;
-                width: 20px;
-                height: 20px;
-                font-family: $slick-font-family;
-                font-size: $slick-dot-size;
-                line-height: 20px;
-                text-align: center;
-                color: $slick-dot-color;
-                opacity: $slick-opacity-not-active;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
+
         }
         &.slick-active button:before {
             color: $slick-dot-color-active;
