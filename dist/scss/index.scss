@@ -6,16 +6,16 @@
 @import "structure/mixins";
 @import "structure/variables";
 
-@import "../../node_modules/animatewithsass/_properties";
 
 // Import the animations
 
-@import "../../node_modules/animatewithsass/_attention-seekers/attention-seekers.scss";
-@import "../../node_modules/animatewithsass/_bouncing-entrances/bouncing-entrances.scss";
-@import "../../node_modules/animatewithsass/_fading-entrances/fading-entrances.scss";
-@import "../../node_modules/animatewithsass/_flippers/flippers.scss";
-@import "../../node_modules/animatewithsass/_rotating-entrances/rotating-entrances.scss";
-@import "../../node_modules/animatewithsass/_zooming-entrances/zooming-entrances.scss";
+
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate.scss";
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate/fadeIn.scss";
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate/fadeInUp.scss";
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate/bounceInLeft.scss";
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate/bounceInRight.scss";
+@import "../../node_modules/animate.scss/vendor/assets/stylesheets/animate/tada.scss";
 
 @import "structure/main";
 @import "structure/slick-theme";

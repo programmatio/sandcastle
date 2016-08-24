@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer')
 module.exports = {
   context: path.resolve(__dirname, 'dist'),
 
-  entry: ['./index.pug', './scss/index.scss', './js/index.js', './js/vendors/ie.js'],
+  entry: ['./turbo.pug', './scss/index.scss', './js/index.js', './js/vendors/ie.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '',
@@ -77,7 +77,7 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new HtmlWebpackPlugin({
-      template: 'index.pug',
+      template: 'turbo.pug',
       inject: true
     })
   ]
