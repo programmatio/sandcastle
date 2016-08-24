@@ -13,7 +13,7 @@ $('.gallery').slickLightbox({
         return (window.devicePixelRatio > 1) ? '@2x' : ''
       })()
 
-      console.log($(slider.$slides[i]))
+
 
       let thumbnailOrder = $(slider.$slides[i])
         .find('img')[0]

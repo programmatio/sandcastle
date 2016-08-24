@@ -363,7 +363,7 @@ p {
          max-width:16.66%; //IE calc fix
     }
   }
-
+  @include respond-to-width($breakpoint-4) {
   .large {
     width: calc(50%);
   }
@@ -373,6 +373,8 @@ p {
   .small {
     width: calc(50% / 3);
   }
+
+ }  
 }
 
 .tile {
