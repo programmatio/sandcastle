@@ -39,7 +39,7 @@ module.exports = {
       { test: /\.css$/, loader: 'style!css' },
 
       {
-        test: /\.(jpe?g|png|svg)$/i,
+        test: /\.(jpe?g|png|svg|gif)$/i,
         exclude: /(node_modules)/,
         loaders: [
           'url-loader?name=[path][name].[ext]&limit=10000',

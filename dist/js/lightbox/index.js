@@ -13,8 +13,6 @@ $('.gallery').slickLightbox({
         return (window.devicePixelRatio > 1) ? '@2x' : ''
       })()
 
-
-
       let thumbnailOrder = $(slider.$slides[i])
         .find('img')[0]
         .src
@@ -26,8 +24,8 @@ $('.gallery').slickLightbox({
         .slice(0)[0]
 
       return `<div class="thumbnail">
-                    <img src='./images/@1x/lightbox-thumb-${thumbnailOrder}.png'
-                        srcset='./images/@2x/lightbox-thumb-${thumbnailOrder}@2x.png 2x'/>
+                    <img src='./images/@1x/lightbox-thumb-${thumbnailOrder}.jpg'
+                        srcset='./images/@2x/lightbox-thumb-${thumbnailOrder}@2x.jpg 2x'/>
                 </div>`
     }
   }

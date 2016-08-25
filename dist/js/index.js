@@ -1,4 +1,5 @@
 import './vendors/ie.js'
+import 'picturefill'
 import './slideshow'
 import './wow'
 

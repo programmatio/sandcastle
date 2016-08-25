@@ -26,9 +26,9 @@ html(lang='en')
               defs
                 filter#blur
                   fegaussianblur(stddeviation='3')
-              image(xlink:href=src=require('./images/@1x/slide-image-1.png'), width='1440' height='600', filter='url(#blur)')
+              image(xlink:href=src=require('./images/@1x/slide-image-1.jpg'), width='1440' height='600', filter='url(#blur)')
 
-            img.blur(src=require('./images/@1x/slide-image-1.png'), srcset=require('./images/@2x/slide-image-1@2x.png') + ' 2x', alt='')
+            img.blur(src=require('./images/@1x/slide-image-1.jpg'), srcset= require('./images/@1x/slide-image-1.jpg')+ ' 1x, ' + require('./images/@2x/slide-image-1@2x.jpg') + ' 2x', alt='')
 
         .container
           .caption
@@ -40,32 +40,32 @@ html(lang='en')
               defs
                 filter#blur
                   fegaussianblur(stddeviation='3')
-              image(xlink:href=src=require('./images/@1x/slide-image-2.png'), width='1440' height='600', filter='url(#blur)')
+              image(xlink:href=src=require('./images/@1x/slide-image-2.jpg'), width='1440' height='600', filter='url(#blur)')
 
 
-            img.blur(src=require('./images/@1x/slide-image-2.png'), srcset=require('./images/@2x/slide-image-2@2x.png') + ' 2x', alt='')
+            img.blur(src=require('./images/@1x/slide-image-2.jpg'), srcset=require('./images/@1x/slide-image-2.jpg') + ' 1x, ' + require('./images/@2x/slide-image-2@2x.jpg') + ' 2x', alt='')
     section#featured.featured
       .responsive
         h2 Best art this month
         p Jurassic beach!
-        img(src=require('./images/@1x/image-1.png'), srcset=require('./images/@2x/image-1@2x.png') + ' 2x', alt='')
+        img(src=require('./images/pixel.gif'), srcset=require('./images/@1x/image-1.png') + ' 1x, ' + require('./images/@2x/image-1@2x.png') + ' 2x', alt='')
         a.btn(href='./images/@1x/image-1.png' data-retina-href='./images/@2x/image-1@2x.png') Full screen
     section#gallery.gallery
       .responsive
         .tile.large.wow.fadeInUp(data-wow-delay="0s")
-            img(src=require('./images/@1x/image-gallery-1.png'), srcset=require('./images/@2x/image-gallery-1@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-1.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-1@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-1.jpg'), srcset=require('./images/@1x/image-gallery-1.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-1@2x.jpg') + ' 2x' alt='')
         .tile.medium.wow.fadeInUp(data-wow-delay="0.5s")
-            img(src=require('./images/@1x/image-gallery-2.png'), srcset=require('./images/@2x/image-gallery-2@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-2.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-2@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-2.jpg'), srcset=require('./images/@1x/image-gallery-2.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-2@2x.jpg') + ' 2x' alt='')
         .tile.medium.wow.fadeInUp(data-wow-delay="1s")
-            img(src=require('./images/@1x/image-gallery-3.png'), srcset=require('./images/@2x/image-gallery-3@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-3.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-3@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-3.jpg'), srcset=require('./images/@1x/image-gallery-3.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-3@2x.jpg') + ' 2x' alt='')
         .tile.small.wow.fadeInUp(data-wow-delay="0s")
-            img(src=require('./images/@1x/image-gallery-4.png'), srcset=require('./images/@2x/image-gallery-4@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-4.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-4@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-4.jpg'), srcset=require('./images/@1x/image-gallery-4.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-4@2x.jpg') + ' 2x' alt='')
         .tile.small.wow.fadeInUp(data-wow-delay="0.5s")
-            img(src=require('./images/@1x/image-gallery-5.png'), srcset=require('./images/@2x/image-gallery-5@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-5.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-5@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-5.jpg'), srcset=require('./images/@1x/image-gallery-5.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-5@2x.jpg') + ' 2x' alt='')
         .tile.small.wow.fadeInUp(data-wow-delay="1s")
-            img(src=require('./images/@1x/image-gallery-6.png'), srcset=require('./images/@2x/image-gallery-6@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-6.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-6@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-6.jpg'), srcset=require('./images/@1x/image-gallery-6.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-6@2x.jpg') + ' 2x' alt='')
         .tile.large.wow.fadeInUp(data-wow-delay="1.5s")
-            img(src=require('./images/@1x/image-gallery-7.png'), srcset=require('./images/@2x/image-gallery-7@2x.png') + ' 2x', data-thumbnail=require('./images/@1x/lightbox-thumb-7.png'), data-thumbnail-2x=require('./images/@2x/lightbox-thumb-7@2x.png'), alt='')
+            img(src=require('./images/@1x/image-gallery-7.jpg'), srcset=require('./images/@1x/image-gallery-7.jpg') + ' 1x, ' + require('./images/@2x/image-gallery-7@2x.jpg') + ' 2x' alt='')
 
     section#side-feature.side-feature
       .responsive
@@ -74,7 +74,7 @@ html(lang='en')
           p The science behind the perfect sand castle
           a.btn(href='#') See Here
         .side.last.wow.bounceInRight
-          img(src=require('./images/@1x/image-2.png'), srcset=require('./images/@2x/image-2@2x.png') + ' 2x', alt='')
+          img(src=require('./images/pixel.gif'), srcset=require('./images/@1x/image-2.png') + ' 1x, ' + require('./images/@2x/image-2@2x.png') + ' 2x', alt='')
 
     footer.footer
       .responsive

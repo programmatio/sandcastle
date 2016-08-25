@@ -39,11 +39,11 @@ module.exports = {
       { test: /\.css$/, loader: 'style!css' },
 
       {
-        test: /\.(jpe?g|png|svg)$/i,
+        test: /\.(jpe?g|png|svg|gif)$/i,
         exclude: /(node_modules)/,
         loaders: [
           'url-loader?name=[path][name].[ext]&limit=10000',
-          'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
+          'image-webpack?{progressive:true, optimizationLevel: 9, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
         ]
       },
       {
